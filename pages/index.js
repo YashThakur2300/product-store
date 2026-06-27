@@ -14,7 +14,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1)
   const [isFiltering, setIsFiltering] = useState(false)
 
-  // Fetch products on the client side instead of server side
+  // Fetch products on the client side cleanly
   useEffect(() => {
     async function loadProducts() {
       try {
@@ -27,6 +27,4 @@ export default function Home() {
       }
     }
     loadProducts()
-  } [], [])
-
-  
+  }, []) 
